@@ -187,7 +187,7 @@ func V2ray2Clash(c *gin.Context) {
 		clashVmess.UUID = vmess.ID
 		clashVmess.AlterID = vmess.Aid
 		clashVmess.Cipher = vmess.Type
-		if "" != vmess.TLS {
+		if "" != vmess.TLS && "none" != vmess.TLS {
 			clashVmess.TLS = true
 		} else {
 			clashVmess.TLS = false
